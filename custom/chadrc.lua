@@ -1,6 +1,6 @@
 local M = {}
 
-local pluginConfigs = require "custom.plugins.configs"
+local overrides = require "custom.overrides"
 
 require "custom.settings"
 
@@ -13,7 +13,8 @@ M.plugins = {
       },
    },
    override = {
-      ["kyazdani42/nvim-tree.lua"] = pluginConfigs.nvimtree,
+      ["kyazdani42/nvim-tree.lua"] = overrides.nvimtree,
+      ["williamboman/mason"] = overrides.mason,
    },
    user = require "custom.plugins",
 }
