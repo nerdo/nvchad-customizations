@@ -30,6 +30,9 @@ M.disabled = {
       -- nvimtree
       ["<C-n>"] = "",
       ["<leader>e"] = "",
+
+      -- telescope
+      ["<leader>fw"] = "",
    },
 }
 
@@ -146,6 +149,12 @@ M.nvimtree = {
       -- focus
       ["<leader>E"] = { "<cmd> NvimTreeFocus <CR>", "   focus nvimtree" },
    },
+}
+
+M.telescope = {
+   n = {
+      ["<leader>ft"] = { "<cmd> Telescope live_grep <CR>", "   find text (live grep)" },
+   }
 }
 
 return M
