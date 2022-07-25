@@ -8,6 +8,9 @@ M.disabled = {
       -- save
       ["<C-s>"] = "",
 
+      -- close buffer
+      ["<leader>x"] = "",
+
       -- next/prev diagnostics
       ["[d"] = "",
       ["d]"] = "",
@@ -23,6 +26,10 @@ M.disabled = {
       -- whickey
       ["<leader>wK"] = "",
       ["<leader>wk"] = "",
+
+      -- nvimtree
+      ["<C-n>"] = "",
+      ["<leader>e"] = "",
    },
 }
 
@@ -30,6 +37,22 @@ M.basic = {
    n = {
       -- save
       ["<leader>w"] = { "<cmd> w <CR>", "﬚  save file" },
+
+      -- close buffer + hide terminal buffer
+      ["<leader>x"] = {
+         function()
+            vim.cmd('w')
+            require("core.utils").close_buffer()
+         end,
+         "   save & close buffer",
+      },
+
+      ["<leader>c"] = {
+         function()
+            require("core.utils").close_buffer()
+         end,
+         "   close buffer",
+      },
 
       -- workspaces
       ["<leader>Wa"] = {
@@ -112,6 +135,16 @@ M.lsp = {
          end,
          "   lsp rename",
       },
+   },
+}
+
+M.nvimtree = {
+   n = {
+      -- toggle
+      ["<leader>e"] = { "<cmd> NvimTreeToggle <CR>", "   toggle nvimtree" },
+
+      -- focus
+      ["<leader>E"] = { "<cmd> NvimTreeFocus <CR>", "   focus nvimtree" },
    },
 }
 
