@@ -19,4 +19,10 @@ return {
 			require("custom.plugins.indent-o-matic")
 		end,
 	},
+
+	["justinmk/vim-sneak"] = {
+		config = function ()
+			require("custom.plugins.vim-sneak")
+		end
+	},
 }
