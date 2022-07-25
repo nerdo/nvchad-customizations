@@ -1,4 +1,11 @@
 return {
+	["neovim/nvim-lspconfig"] = {
+		config = function()
+			require("plugins.configs.lspconfig")
+			require("custom.plugins.lspconfig")
+		end,
+	},
+
 	-- autoclose tags in html, jsx etc
 	["windwp/nvim-ts-autotag"] = {
 		after = "nvim-treesitter",
@@ -21,8 +28,8 @@ return {
 	},
 
 	["justinmk/vim-sneak"] = {
-		config = function ()
+		config = function()
 			require("custom.plugins.vim-sneak")
-		end
+		end,
 	},
 }
