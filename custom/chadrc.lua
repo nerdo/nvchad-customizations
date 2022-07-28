@@ -9,7 +9,7 @@ M.mappings = require "custom.mappings"
 M.plugins = {
    override = {
       ["kyazdani42/nvim-tree.lua"] = overrides.nvimtree,
-      ["williamboman/mason"] = overrides.mason,
+      ["williamboman/mason.nvim"] = overrides.mason,
    },
    user = require "custom.plugins",
 }

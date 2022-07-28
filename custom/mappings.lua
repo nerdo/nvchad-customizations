@@ -38,6 +38,10 @@ M.disabled = {
 
 		-- lsp
 		["<leader>ca"] = "",
+
+		-- nvterm
+		["<leader>h"] = "",
+		["<leader>v"] = "",
 	},
 }
 
@@ -83,6 +87,9 @@ M.basic = {
 			end,
 			"   list workspace folders",
 		},
+
+		-- highlighting
+		["<leader>h"] = {":noh<CR>", "  turn off search highlights"}
 	},
 }
 
