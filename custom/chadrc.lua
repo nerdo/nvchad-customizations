@@ -2,7 +2,11 @@ local M = {}
 
 local overrides = require "custom.overrides"
 
-require "custom.settings"
+vim.opt.scrolloff = 999
+
+M.ui = {
+  theme = "ayu-dark",
+}
 
 M.mappings = require "custom.mappings"
 
