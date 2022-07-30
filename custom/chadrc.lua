@@ -1,5 +1,7 @@
 local M = {}
 
+require "custom.functions"
+
 local overrides = require "custom.overrides"
 
 vim.opt.scrolloff = 999

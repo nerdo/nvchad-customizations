@@ -89,7 +89,13 @@ M.basic = {
 		},
 
 		-- highlighting
-		["<leader>h"] = {":noh<CR>", "  turn off search highlights"}
+		["<leader>h"] = {":noh<CR>", "  turn off search highlights"},
+
+		-- path
+		["<leader>yr"] = {":CpRelPath<CR>", "📋 copy relative file path to clipboard"},
+		["<leader>ya"] = {":CpAbsPath<CR>", "📋 copy absolute file path to clipboard"},
+		["<leader>R"] = {":ShowRelPath<CR>", "📄 show relative file path"},
+		["<leader>A"] = {":ShowAbsPath<CR>", "📄 show absolute file path"},
 	},
 }
 
