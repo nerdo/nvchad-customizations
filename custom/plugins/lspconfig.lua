@@ -12,6 +12,7 @@ local servers = {
 	"tailwindcss",
 	"tsserver",
 	"yamlls",
+	"svelte",
 }
 
 for _, lsp in ipairs(servers) do

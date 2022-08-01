@@ -24,6 +24,7 @@ M.mason = {
 		"tailwindcss-language-server",
 		"typescript-language-server",
 		"yaml-language-server",
+		"svelte-language-server",
 	},
 }
 

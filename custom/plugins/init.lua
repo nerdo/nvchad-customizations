@@ -1,6 +1,8 @@
 return {
 	["tpope/vim-abolish"] = {},
 
+	["evanleck/vim-svelte"] = {},
+
 	["neovim/nvim-lspconfig"] = {
 		config = function()
 			require("plugins.configs.lspconfig")
