@@ -8,6 +8,9 @@ M.disabled = {
 		-- close buffer
 		["<leader>x"] = "",
 
+		-- sneak
+		[";"] = "",
+
 		-- next/prev diagnostics
 		["[d"] = "",
 		["d]"] = "",
@@ -90,8 +93,20 @@ M.lspconfig = {
 			end,
 			"   lsp prev diagnostic",
 		},
+		[";K"] = {
+			function()
+				vim.diagnostic.goto_prev()
+			end,
+			"   lsp prev diagnostic",
+		},
 
 		["<leader>lj"] = {
+			function()
+				vim.diagnostic.goto_next()
+			end,
+			"   lsp next diagnostic",
+		},
+		[";J"] = {
 			function()
 				vim.diagnostic.goto_next()
 			end,
@@ -137,6 +152,13 @@ M.telescope = {
 M.git = {
 	n = {
 		["<leader>gp"] = { "<cmd> Gitsigns preview_hunk <CR>", "  git preview hunk"},
+		[";;"] = { "<cmd> Gitsigns preview_hunk <CR>", "  git preview hunk"},
+
+		["<leader>gn"] = { "<cmd> Gitsigns next_hunk <CR>", "  git next hunk"},
+		[";j"] = { "<cmd> Gitsigns next_hunk <CR>", "  git next hunk"},
+
+		["<leader>gN"] = { "<cmd> Gitsigns prev_hunk <CR>", "  git prev hunk"},
+		[";k"] = { "<cmd> Gitsigns prev_hunk <CR>", "  git prev hunk"},
 	}
 }
 
