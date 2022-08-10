@@ -36,4 +36,9 @@ return {
 			require("custom.plugins.vim-sneak")
 		end,
 	},
+
+	-- enablpreview hunk which-key
+  ["folke/which-key.nvim"] = {
+    disable = false,
+  },
 }

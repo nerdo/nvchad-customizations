@@ -5,9 +5,6 @@ M.disabled = {
 		-- format
 		["<leader>fm"] = "",
 
-		-- save
-		["<C-s>"] = "",
-
 		-- close buffer
 		["<leader>x"] = "",
 
@@ -17,15 +14,6 @@ M.disabled = {
 
 		-- rename
 		["<leader>ra"] = "",
-
-		-- workspaces
-		["<leader>wa"] = "",
-		["<leader>wr"] = "",
-		["<leader>wl"] = "",
-
-		-- whickey
-		["<leader>wK"] = "",
-		["<leader>wk"] = "",
 
 		-- nvimtree
 		["<C-n>"] = "",
@@ -48,7 +36,7 @@ M.disabled = {
 M.basic = {
 	n = {
 		-- save
-		["<leader>w"] = { "<cmd> w <CR>", "﬚  save file" },
+		["<leader>;"] = { "<cmd> w <CR>", "﬚  save file" },
 
 		-- close buffer + hide terminal buffer
 		["<leader>x"] = {
@@ -66,28 +54,6 @@ M.basic = {
 			"   close buffer",
 		},
 
-		-- workspaces
-		["<leader>Wa"] = {
-			function()
-				vim.lsp.buf.add_workspace_folder()
-			end,
-			"   add workspace folder",
-		},
-
-		["<leader>Wr"] = {
-			function()
-				vim.lsp.buf.remove_workspace_folder()
-			end,
-			"   remove workspace folder",
-		},
-
-		["<leader>Wl"] = {
-			function()
-				print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-			end,
-			"   list workspace folders",
-		},
-
 		-- highlighting
 		["<leader>h"] = {":noh<CR>", "  turn off search highlights"},
 
@@ -96,24 +62,6 @@ M.basic = {
 		["<leader>ya"] = {":CpAbsPath<CR>", "📋 copy absolute file path to clipboard"},
 		["<leader>R"] = {":ShowRelPath<CR>", "📄 show relative file path"},
 		["<leader>A"] = {":ShowAbsPath<CR>", "📄 show absolute file path"},
-	},
-}
-
-M.whichkey = {
-	n = {
-		["<leader>WK"] = {
-			function()
-				vim.cmd("WhichKey")
-			end,
-			"   which-key all keymaps",
-		},
-		["<leader>Wk"] = {
-			function()
-				local input = vim.fn.input("WhichKey: ")
-				vim.cmd("WhichKey " .. input)
-			end,
-			"   which-key query lookup",
-		},
 	},
 }
 
@@ -184,6 +132,12 @@ M.telescope = {
 		["<leader>gl"] = { "<cmd> Telescope git_commits <CR>", "   git log (commits)" },
 		["<leader>gs"] = { "<cmd> Telescope git_status <CR>", "  git status" },
 	},
+}
+
+M.git = {
+	n = {
+		["<leader>gp"] = { "<cmd> Gitsigns preview_hunk <CR>", "  git preview hunk"},
+	}
 }
 
 return M
