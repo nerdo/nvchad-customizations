@@ -58,13 +58,13 @@ M.basic = {
 		},
 
 		-- highlighting
-		["<leader>h"] = {":noh<CR>", "  turn off search highlights"},
+		["<leader>h"] = { ":noh<CR>", "  turn off search highlights" },
 
 		-- path
-		["<leader>yr"] = {":CpRelPath<CR>", "📋 copy relative file path to clipboard"},
-		["<leader>ya"] = {":CpAbsPath<CR>", "📋 copy absolute file path to clipboard"},
-		["<leader>R"] = {":ShowRelPath<CR>", "📄 show relative file path"},
-		["<leader>A"] = {":ShowAbsPath<CR>", "📄 show absolute file path"},
+		["<leader>yr"] = { ":CpRelPath<CR>", "📋 copy relative file path to clipboard" },
+		["<leader>ya"] = { ":CpAbsPath<CR>", "📋 copy absolute file path to clipboard" },
+		["<leader>R"] = { ":ShowRelPath<CR>", "📄 show relative file path" },
+		["<leader>A"] = { ":ShowAbsPath<CR>", "📄 show absolute file path" },
 	},
 }
 
@@ -141,6 +141,8 @@ M.nvimtree = {
 
 M.telescope = {
 	n = {
+		["<leader>T"] = { "<cmd> Telescope <CR>", "Telescope" },
+
 		["<leader>ft"] = { "<cmd> Telescope live_grep <CR>", "   find text (live grep)" },
 
 		-- git
@@ -151,15 +153,15 @@ M.telescope = {
 
 M.git = {
 	n = {
-		["<leader>gp"] = { "<cmd> Gitsigns preview_hunk <CR>", "  git preview hunk"},
-		[";;"] = { "<cmd> Gitsigns preview_hunk <CR>", "  git preview hunk"},
+		["<leader>gp"] = { "<cmd> Gitsigns preview_hunk <CR>", "  git preview hunk" },
+		[";;"] = { "<cmd> Gitsigns preview_hunk <CR>", "  git preview hunk" },
 
-		["<leader>gn"] = { "<cmd> Gitsigns next_hunk <CR>", "  git next hunk"},
-		[";j"] = { "<cmd> Gitsigns next_hunk <CR>", "  git next hunk"},
+		["<leader>gn"] = { "<cmd> Gitsigns next_hunk <CR>", "  git next hunk" },
+		[";j"] = { "<cmd> Gitsigns next_hunk <CR>", "  git next hunk" },
 
-		["<leader>gN"] = { "<cmd> Gitsigns prev_hunk <CR>", "  git prev hunk"},
-		[";k"] = { "<cmd> Gitsigns prev_hunk <CR>", "  git prev hunk"},
-	}
+		["<leader>gN"] = { "<cmd> Gitsigns prev_hunk <CR>", "  git prev hunk" },
+		[";k"] = { "<cmd> Gitsigns prev_hunk <CR>", "  git prev hunk" },
+	},
 }
 
 return M
