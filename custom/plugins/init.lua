@@ -41,4 +41,10 @@ return {
   ["folke/which-key.nvim"] = {
     disable = false,
   },
+
+	["romainl/vim-qf"] = {
+		config = function()
+			require("custom.plugins.vim-qf")
+		end
+	},
 }
