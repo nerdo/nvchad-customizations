@@ -25,6 +25,13 @@ return {
 		end,
 	},
 
+	["nvim-treesitter/playground"] = {
+		after = "nvim-treesitter",
+		config = function()
+			require("custom.plugins.nvim-treesitter-playground")
+		end,
+	},
+
 	["jose-elias-alvarez/null-ls.nvim"] = {
 		after = "nvim-lspconfig",
 		config = function()

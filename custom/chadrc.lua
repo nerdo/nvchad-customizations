@@ -23,6 +23,7 @@ M.plugins = {
 	override = {
 		["kyazdani42/nvim-tree.lua"] = overrides.nvimtree,
 		["williamboman/mason.nvim"] = overrides.mason,
+		["nvim-treesitter/nvim-treesitter"] = overrides.treesitter,
 	},
 	user = require("custom.plugins"),
 }

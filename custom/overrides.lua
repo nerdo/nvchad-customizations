@@ -29,4 +29,31 @@ M.mason = {
 	},
 }
 
+M.treesitter = {
+	auto_install = true,
+	ensure_installed = {
+		"bash",
+		"html",
+		"css",
+		"dockerfile",
+		"gitignore",
+		"javascript",
+		"json",
+		"jsdoc",
+		"lua",
+		"markdown",
+		"php",
+		"rust",
+		"sql",
+		"scss",
+		"svelte",
+		"toml",
+		"tsx",
+		"typescript",
+		"vim",
+		"vue",
+		"yaml",
+	}
+}
+
 return M
