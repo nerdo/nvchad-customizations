@@ -18,6 +18,13 @@ return {
 		end,
 	},
 
+	["nvim-treesitter/nvim-treesitter-context"] = {
+		after = "nvim-treesitter",
+		config = function()
+			require("custom.plugins.nvim-treesitter-context")
+		end,
+	},
+
 	["jose-elias-alvarez/null-ls.nvim"] = {
 		after = "nvim-lspconfig",
 		config = function()
@@ -38,13 +45,13 @@ return {
 	},
 
 	-- enablpreview hunk which-key
-  ["folke/which-key.nvim"] = {
-    disable = false,
-  },
+	["folke/which-key.nvim"] = {
+		disable = false,
+	},
 
 	["romainl/vim-qf"] = {
 		config = function()
 			require("custom.plugins.vim-qf")
-		end
+		end,
 	},
 }
