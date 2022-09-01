@@ -3,6 +3,7 @@ local M = {}
 M.nvimtree = {
 	view = {
 		number = true,
+		relativenumber = true,
 	},
 	actions = {
 		open_file = {

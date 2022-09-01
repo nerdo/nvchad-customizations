@@ -65,6 +65,10 @@ M.basic = {
 		["<leader>ya"] = { ":CpAbsPath<CR>", "📋 copy absolute file path to clipboard" },
 		["<leader>R"] = { ":ShowRelPath<CR>", "📄 show relative file path" },
 		["<leader>A"] = { ":ShowAbsPath<CR>", "📄 show absolute file path" },
+
+		-- line number toggling
+		["<leader>Lr"] = { ":set number relativenumber<CR>", "# set relative line number mode"},
+		["<leader>La"] = { ":set number norelativenumber<CR>", "# set absolute line number mode"},
 	},
 }
 
