@@ -4,10 +4,6 @@ require("custom.functions")
 
 local overrides = require("custom.overrides")
 
-vim.opt.scrolloff = 999
-vim.opt.number = true
-vim.opt.relativenumber = true
-
 M.mappings = require("custom.mappings")
 
 M.ui = {
