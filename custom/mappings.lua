@@ -28,7 +28,7 @@ M.disabled = {
 		["<leader>gt"] = "",
 
 		-- lsp
-		["<leader>ca"] = "",
+		["gr"] = "",
 
 		-- nvterm
 		["<leader>h"] = "",
@@ -40,9 +40,10 @@ M.basic = {
 	n = {
 		-- save
 		["<leader>;"] = { "<cmd> w <CR>", "﬚  save file" },
+		[",;"] = { "<cmd> w <CR>", "﬚  save file" },
 
 		-- close buffer + hide terminal buffer
-		["<leader>x"] = {
+		[",x"] = {
 			function()
 				vim.cmd("w")
 				require("core.utils").close_buffer()
@@ -50,7 +51,7 @@ M.basic = {
 			"   save & close buffer",
 		},
 
-		["<leader>c"] = {
+		[",c"] = {
 			function()
 				require("core.utils").close_buffer()
 			end,
@@ -137,6 +138,7 @@ M.nvimtree = {
 	n = {
 		-- toggle
 		["<leader>e"] = { "<cmd> NvimTreeToggle <CR>", "   toggle nvimtree" },
+		[",,"] = { "<cmd> NvimTreeToggle <CR>", "   toggle nvimtree" },
 
 		-- focus
 		["<leader>E"] = { "<cmd> NvimTreeFocus <CR>", "   focus nvimtree" },
@@ -152,6 +154,16 @@ M.telescope = {
 		-- git
 		["<leader>gl"] = { "<cmd> Telescope git_commits <CR>", "   git log (commits)" },
 		["<leader>gs"] = { "<cmd> Telescope git_status <CR>", "  git status" },
+
+		["gr"] = { "<cmd> Telescope lsp_references <CR>", "lsp references"},
+		["<leader>lS"] = { "<cmd> Telescope lsp_dynamic_workspace_symbols <CR>", "lsp dynamic workspace symbols"},
+		["<leader>lj"] = { "<cmd> Telescope lsp_document_symbols <CR>", "lsp document symbols"},
+		[",S"] = { "<cmd> Telescope lsp_dynamic_workspace_symbols <CR>", "lsp dynamic workspace symbols"},
+		[",s"] = { "<cmd> Telescope lsp_document_symbols <CR>", "lsp document symbols"},
+
+		-- find
+    [",f"] = { "<cmd> Telescope find_files <CR>", "find files" },
+		[",t"] = { "<cmd> Telescope live_grep <CR>", "   find text (live grep)" },
 	},
 }
 
