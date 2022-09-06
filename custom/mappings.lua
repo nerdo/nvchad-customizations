@@ -164,6 +164,9 @@ M.telescope = {
 		-- find
     [",f"] = { "<cmd> Telescope find_files <CR>", "find files" },
 		[",t"] = { "<cmd> Telescope live_grep <CR>", "   find text (live grep)" },
+
+		-- treesitter
+		["<leader>lg"] = { "<cmd> Telescope treesitter <CR>", "  Go to (treesitter)" },
 	},
 }
 
