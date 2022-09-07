@@ -57,6 +57,9 @@ M.basic = {
 			"   close buffer",
 		},
 
+		[",q"] = { "<cmd> qa <CR>", "quit" },
+		[",Q"] = { "<cmd> qa! <CR>", "quit without saving" },
+
 		-- highlighting
 		["<leader>h"] = { ":noh<CR>", "  turn off search highlights" },
 
