@@ -6,6 +6,8 @@ local overrides = require("custom.overrides")
 
 M.mappings = require("custom.mappings")
 
+-- execute the following to see all available highlight groups
+-- :so $VIMRUNTIME/syntax/hitest.vim
 M.ui = {
 	theme = "chadracula",
 	hl_override = {
@@ -13,6 +15,12 @@ M.ui = {
 			-- bg = "one_bg",
 			bg = "#27408B",
 		},
+		TbLineBufOn	= {
+			bg = "#27408B",
+		},
+		TbLineBufOnClose = {
+			bg = "#27408B",
+		}
 	},
 }
 
