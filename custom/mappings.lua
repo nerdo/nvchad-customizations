@@ -39,7 +39,6 @@ M.disabled = {
 M.basic = {
 	n = {
 		-- save
-		["<leader>;"] = { "<cmd> w <CR>", "﬚  save file" },
 		[",;"] = { "<cmd> w <CR>", "﬚  save file" },
 
 		-- close buffer + hide terminal buffer
