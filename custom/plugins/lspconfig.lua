@@ -2,17 +2,17 @@ local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require("lspconfig")
 local servers = {
+	"rust_analyzer",
+	"intelephense",
+	"svelte",
+	"tsserver",
 	"html",
 	"cssls",
 	"cssmodules_ls",
-	"emmet_ls",
-	"intelephense",
-	"jsonls",
-	"rust_analyzer",
 	"tailwindcss",
-	"tsserver",
+	"emmet_ls",
+	"jsonls",
 	"yamlls",
-	"svelte",
 }
 
 for _, lsp in ipairs(servers) do
