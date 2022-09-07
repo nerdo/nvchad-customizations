@@ -1,4 +1,5 @@
 return {
+	-- smart renaming, preserving case, etc.
 	["tpope/vim-abolish"] = {},
 
 	["evanleck/vim-svelte"] = {},
@@ -39,6 +40,7 @@ return {
 		end,
 	},
 
+	-- automatic detection of tab size
 	["Darazaki/indent-o-matic"] = {
 		config = function()
 			require("custom.plugins.indent-o-matic")
@@ -53,11 +55,5 @@ return {
 
 	["folke/which-key.nvim"] = {
 		disable = false,
-	},
-
-	["romainl/vim-qf"] = {
-		config = function()
-			require("custom.plugins.vim-qf")
-		end,
 	},
 }
