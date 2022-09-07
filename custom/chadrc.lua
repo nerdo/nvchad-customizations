@@ -10,19 +10,41 @@ M.mappings = require("custom.mappings")
 -- :so $VIMRUNTIME/syntax/hitest.vim
 M.ui = {
 	theme = "chadracula",
-	hl_override = {
-		CursorLine = {
-			-- bg = "one_bg",
-			bg = "#27408B",
-		},
-		TbLineBufOn	= {
-			bg = "#27408B",
-		},
-		TbLineBufOnClose = {
-			bg = "#27408B",
+	changed_themes = {
+		chadracula = {
+			base_30 = {
+				black = "#0B0E14", --  nvim bg
+			},
+
+			base_16 = {
+				base00 = "#0B0E14",
+			}
 		}
 	},
+	hl_override = {
+		Visual = {
+			bg = "#3067C5",
+		},
+		CursorLine = {
+			bg = "#13294E",
+		},
+		TbLineBufOn = {
+			bg = "#13294E",
+		},
+		TbLineBufOnModified = {
+			bg = "#13294E",
+		},
+		TbLineBufOnClose = {
+			bg = "#13294E",
+		},
+		IndentBlanklineContextStart = {
+			bg = "#1A6165",
+		},
+	}
 }
+
+-- for some reason setting the TreesitterContext in the theme didn't work...
+vim.api.nvim_set_hl(0, 'TreesitterContext', { bg = "#1A6165" })
 
 M.plugins = {
 	override = {
