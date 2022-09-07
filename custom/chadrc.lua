@@ -10,7 +10,8 @@ M.ui = {
 	theme = "chadracula",
 	hl_override = {
 		CursorLine = {
-			bg = "one_bg",
+			-- bg = "one_bg",
+			bg = "#27408B",
 		},
 	},
 }
