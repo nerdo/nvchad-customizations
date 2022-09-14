@@ -2,8 +2,6 @@ local M = {}
 
 require("custom.functions")
 
-local overrides = require("custom.overrides")
-
 M.mappings = require("custom.mappings")
 
 -- execute the following to see all available highlight groups
@@ -18,8 +16,8 @@ M.ui = {
 
 			base_16 = {
 				base00 = "#0B0E14",
-			}
-		}
+			},
+		},
 	},
 	hl_override = {
 		Visual = {
@@ -39,20 +37,20 @@ M.ui = {
 		},
 		IndentBlanklineContextStart = {
 			bg = "#1A6165",
+			underline = true,
 		},
-	}
+		IndentBlanklineContextChar = {
+			fg = "#1A6165",
+		},
+		IndentBlanklineSpaceCharBlankline = {
+			fg = "#1A6165",
+		},
+	},
 }
 
 -- for some reason setting the TreesitterContext in the theme didn't work...
-vim.api.nvim_set_hl(0, 'TreesitterContext', { bg = "#1A6165" })
+vim.api.nvim_set_hl(0, "TreesitterContext", { bg = "#1A6165" })
 
-M.plugins = {
-	override = {
-		["kyazdani42/nvim-tree.lua"] = overrides.nvimtree,
-		["williamboman/mason.nvim"] = overrides.mason,
-		["nvim-treesitter/nvim-treesitter"] = overrides.treesitter,
-	},
-	user = require("custom.plugins"),
-}
+M.plugins = require("custom.plugins")
 
 return M
