@@ -1,4 +1,6 @@
 return {
+	["windwp/nvim-autopairs"] = false,
+
 	["folke/which-key.nvim"] = {
 		disable = false,
 	},
