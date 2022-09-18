@@ -1,5 +1,15 @@
 return {
 	["windwp/nvim-autopairs"] = false,
+	-- ["windwp/nvim-autopairs"] = {
+	-- 	override_options = {
+	-- 		fast_wrap = {
+	-- 			map = '<M-.>'
+	-- 		}
+	-- 	},
+	-- 	config = function()
+	-- 		require('nvim-autopairs').disable()
+	-- 	end,
+	-- },
 
 	["folke/which-key.nvim"] = {
 		disable = false,
@@ -87,6 +97,9 @@ return {
 				"vim",
 				"vue",
 				"yaml",
+			},
+			indent = {
+				enable = false,
 			},
 		},
 	},
