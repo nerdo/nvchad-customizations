@@ -45,14 +45,14 @@ M.basic = {
 		[",x"] = {
 			function()
 				vim.cmd("w")
-				require("core.utils").close_buffer()
+				vim.cmd("bd")
 			end,
 			"   save & close buffer",
 		},
 
 		[",c"] = {
 			function()
-				require("core.utils").close_buffer()
+				vim.cmd("bd")
 			end,
 			"   close buffer",
 		},
