@@ -57,6 +57,13 @@ M.basic = {
 			"   close buffer",
 		},
 
+		[",C"] = {
+			function()
+				vim.cmd("bd!")
+			end,
+			"   close buffer without saving",
+		},
+
 		[",q"] = { "<cmd> qa <CR>", "quit" },
 		[",Q"] = { "<cmd> qa! <CR>", "quit without saving" },
 
