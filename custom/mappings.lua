@@ -33,6 +33,10 @@ M.disabled = {
 		-- nvterm
 		["<leader>h"] = "",
 		["<leader>v"] = "",
+
+		-- greatest remap evar! https://youtu.be/qZO9A5F6BZs?t=356
+		-- delete into 
+		[",p"] = "\"_dP",
 	},
 }
 
