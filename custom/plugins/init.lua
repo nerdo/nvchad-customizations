@@ -154,9 +154,10 @@ return {
 		end,
 	},
 
-	["justinmk/vim-sneak"] = {
-		config = function()
-			require("custom.plugins.vim-sneak")
-		end,
-	},
+	-- removing sneak, trying it out for a while...
+-- 	["justinmk/vim-sneak"] = {
+-- 		config = function()
+-- 			require("custom.plugins.vim-sneak")
+-- 		end,
+-- 	},
 }
