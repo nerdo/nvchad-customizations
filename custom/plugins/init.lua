@@ -15,11 +15,11 @@ return {
 		},
 	},
 
-	-- causes :so $VIMRUNTIME/syntax/hitest.vim to hang
-	-- ...and probably lots of other issues
-	-- ["folke/which-key.nvim"] = {
-	-- 	disable = false,
-	-- },
+	["justinmk/vim-sneak"] = {
+		config = function()
+			require("custom.plugins.vim-sneak")
+		end,
+	},
 
 	["lukas-reineke/indent-blankline.nvim"] = {
 		override_options = function()
@@ -32,9 +32,6 @@ return {
 					context_highlight_list = {
 						"IndentBlanklineSpaceCharBlankline",
 					},
-					-- char = "",
-					-- context_char = "",
-					-- context_char_blankline = "",
 				}
 			end
 
@@ -81,7 +78,6 @@ return {
 
 	["nvim-treesitter/nvim-treesitter"] = {
 		override_options = {
-			-- auto_install = true,
 			ensure_installed = {
 				"bash",
 				"html",
