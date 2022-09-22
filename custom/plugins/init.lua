@@ -1,8 +1,22 @@
 return {
 	["windwp/nvim-autopairs"] = false,
 
-  -- causes :so $VIMRUNTIME/syntax/hitest.vim to hang
-  -- ...and probably lots of other issues
+	["NvChad/nvterm"] = {
+		override_options = {
+			terminals = {
+				type_opts = {
+					float = {
+						row = 0.125,
+						width = 1.0,
+						height = 0.75,
+					},
+				},
+			},
+		},
+	},
+
+	-- causes :so $VIMRUNTIME/syntax/hitest.vim to hang
+	-- ...and probably lots of other issues
 	-- ["folke/which-key.nvim"] = {
 	-- 	disable = false,
 	-- },
@@ -16,7 +30,7 @@ return {
 					use_treesitter = true,
 					space_char_blankline = " ",
 					context_highlight_list = {
-						"IndentBlanklineSpaceCharBlankline"
+						"IndentBlanklineSpaceCharBlankline",
 					},
 					-- char = "",
 					-- context_char = "",
