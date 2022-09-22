@@ -1,19 +1,11 @@
 return {
 	["windwp/nvim-autopairs"] = false,
-	-- ["windwp/nvim-autopairs"] = {
-	-- 	override_options = {
-	-- 		fast_wrap = {
-	-- 			map = '<M-.>'
-	-- 		}
-	-- 	},
-	-- 	config = function()
-	-- 		require('nvim-autopairs').disable()
-	-- 	end,
-	-- },
 
-	["folke/which-key.nvim"] = {
-		disable = false,
-	},
+  -- causes :so $VIMRUNTIME/syntax/hitest.vim to hang
+  -- ...and probably lots of other issues
+	-- ["folke/which-key.nvim"] = {
+	-- 	disable = false,
+	-- },
 
 	["lukas-reineke/indent-blankline.nvim"] = {
 		override_options = function()
@@ -75,7 +67,7 @@ return {
 
 	["nvim-treesitter/nvim-treesitter"] = {
 		override_options = {
-			auto_install = true,
+			-- auto_install = true,
 			ensure_installed = {
 				"bash",
 				"html",
@@ -153,11 +145,4 @@ return {
 			require("custom.plugins.indent-o-matic")
 		end,
 	},
-
-	-- removing sneak, trying it out for a while...
--- 	["justinmk/vim-sneak"] = {
--- 		config = function()
--- 			require("custom.plugins.vim-sneak")
--- 		end,
--- 	},
 }
