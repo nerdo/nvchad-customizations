@@ -35,7 +35,13 @@ M.disabled = {
 		["<leader>v"] = "",
 
 		-- greatest remap evar! https://youtu.be/qZO9A5F6BZs?t=356
-		-- delete into 
+		-- preserves the register when using this keymap to paste 
+		[",p"] = "\"_dP",
+	},
+
+	v = {
+		-- greatest remap evar! https://youtu.be/qZO9A5F6BZs?t=356
+		-- (I think , is mapped to something else in visual mode, this ensures this works in visual mode)
 		[",p"] = "\"_dP",
 	},
 }
