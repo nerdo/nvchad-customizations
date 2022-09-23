@@ -15,12 +15,6 @@ return {
 		},
 	},
 
-	["justinmk/vim-sneak"] = {
-		config = function()
-			require("custom.plugins.vim-sneak")
-		end,
-	},
-
 	["lukas-reineke/indent-blankline.nvim"] = {
 		override_options = function()
 			vim.g.indent_blankline_char = ""
@@ -110,6 +104,9 @@ return {
 
 	-- smart renaming, preserving case, etc.
 	["tpope/vim-abolish"] = {},
+
+	-- clear search highlighting when done
+	["romainl/vim-cool"] = {},
 
 	["evanleck/vim-svelte"] = {},
 
