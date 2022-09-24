@@ -60,6 +60,14 @@ M.basic = {
 			"   save & close buffer",
 		},
 
+		[",X"] = {
+			function()
+				vim.cmd("w")
+				vim.cmd("x")
+			end,
+			"   save & quit",
+		},
+
 		[",c"] = {
 			function()
 				vim.cmd("bd")
