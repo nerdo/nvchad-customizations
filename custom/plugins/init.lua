@@ -8,7 +8,11 @@ return {
 					float = {
 						row = 0,
 						width = 1.0,
-						height = 1.0,
+
+						-- to be able to see the status line for the current mode
+						-- calculating it like this only works as long as the 
+						-- number of lines in vim doesn't change (window resize)
+						height = (vim.o.lines - 4) / vim.o.lines,
 					},
 				},
 			},
