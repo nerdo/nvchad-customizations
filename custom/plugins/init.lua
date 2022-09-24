@@ -6,9 +6,9 @@ return {
 			terminals = {
 				type_opts = {
 					float = {
-						row = 0.125,
+						row = 0,
 						width = 1.0,
-						height = 0.75,
+						height = 1.0,
 					},
 				},
 			},
@@ -152,4 +152,8 @@ return {
 			require("custom.plugins.indent-o-matic")
 		end,
 	},
+
+	-- quick scope automatically highlights individual 
+	-- characters used to move with f,F,t,T motions
+	["unblevable/quick-scope"] = {},
 }
