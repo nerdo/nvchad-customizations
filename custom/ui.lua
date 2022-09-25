@@ -1,5 +1,6 @@
 -- execute the following to see all available highlight groups
 -- :so $VIMRUNTIME/syntax/hitest.vim
+-- or better yet, launch telescope and search for highlights
 return {
 	theme = "chadracula",
 	changed_themes = {
@@ -41,6 +42,9 @@ return {
 		},
 		IndentBlanklineSpaceCharBlankline = {
 			fg = "#1A6165",
+		},
+		TelescopeSelection = {
+			bg = "#06337F",
 		},
 	},
 	hl_add = {
