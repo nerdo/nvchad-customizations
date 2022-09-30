@@ -28,6 +28,10 @@ nvim_treesitter_context.setup({
 			'variable_declarator',
 			'assignment_expression',
 			'pair',
+
+			-- mostly for json... if it proves to be annoying in other contexts, wrap in json = {}
+			'object',
+			'array',
 		},
 	},
 
