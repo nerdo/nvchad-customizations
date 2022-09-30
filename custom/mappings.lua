@@ -33,21 +33,27 @@ M.disabled = {
 		-- nvterm
 		["<leader>h"] = "",
 		["<leader>v"] = "",
-
-		-- greatest remap evar! https://youtu.be/qZO9A5F6BZs?t=356
-		-- preserves the register when using this keymap to paste 
-		[",p"] = "\"_dP",
-	},
-
-	v = {
-		-- greatest remap evar! https://youtu.be/qZO9A5F6BZs?t=356
-		-- (I think , is mapped to something else in visual mode, this ensures this works in visual mode)
-		[",p"] = "\"_dP",
 	},
 }
 
 M.basic = {
+	v = {
+		-- greatest remap evar! https://youtu.be/qZO9A5F6BZs?t=356
+		-- (I think , is mapped to something else in visual mode, this ensures this works in visual mode)
+		[",p"] = { '"_dP' },
+	},
+
 	n = {
+		-- greatest remap evar! https://youtu.be/qZO9A5F6BZs?t=356
+		-- preserves the register when using this keymap to paste
+		[",p"] = { '"_dP' },
+
+		-- simpler window navigation
+		["<C-h>"] = { "<C-w>h" },
+		["<C-j>"] = { "<C-w>j" },
+		["<C-k>"] = { "<C-w>k" },
+		["<C-l>"] = { "<C-w>l" },
+
 		-- save
 		[",;"] = { "<cmd> w <CR>", "﬚  save file" },
 
@@ -95,8 +101,8 @@ M.basic = {
 		["<leader>A"] = { ":ShowAbsPath<CR>", "📄 show absolute file path" },
 
 		-- line number toggling
-		["<leader>Lr"] = { ":set number relativenumber<CR>", "# set relative line number mode"},
-		["<leader>La"] = { ":set number norelativenumber<CR>", "# set absolute line number mode"},
+		["<leader>Lr"] = { ":set number relativenumber<CR>", "# set relative line number mode" },
+		["<leader>La"] = { ":set number norelativenumber<CR>", "# set absolute line number mode" },
 	},
 }
 
@@ -182,14 +188,14 @@ M.telescope = {
 		["<leader>gl"] = { "<cmd> Telescope git_commits <CR>", "   git log (commits)" },
 		["<leader>gs"] = { "<cmd> Telescope git_status <CR>", "  git status" },
 
-		["gr"] = { "<cmd> Telescope lsp_references <CR>", "lsp references"},
-		["<leader>lS"] = { "<cmd> Telescope lsp_dynamic_workspace_symbols <CR>", "lsp dynamic workspace symbols"},
-		["<leader>lj"] = { "<cmd> Telescope lsp_document_symbols <CR>", "lsp document symbols"},
-		[",S"] = { "<cmd> Telescope lsp_dynamic_workspace_symbols <CR>", "lsp dynamic workspace symbols"},
-		[",s"] = { "<cmd> Telescope lsp_document_symbols <CR>", "lsp document symbols"},
+		["gr"] = { "<cmd> Telescope lsp_references <CR>", "lsp references" },
+		["<leader>lS"] = { "<cmd> Telescope lsp_dynamic_workspace_symbols <CR>", "lsp dynamic workspace symbols" },
+		["<leader>lj"] = { "<cmd> Telescope lsp_document_symbols <CR>", "lsp document symbols" },
+		[",S"] = { "<cmd> Telescope lsp_dynamic_workspace_symbols <CR>", "lsp dynamic workspace symbols" },
+		[",s"] = { "<cmd> Telescope lsp_document_symbols <CR>", "lsp document symbols" },
 
 		-- find
-    [",f"] = { "<cmd> Telescope find_files <CR>", "find files" },
+		[",f"] = { "<cmd> Telescope find_files <CR>", "find files" },
 		[",t"] = { "<cmd> Telescope live_grep <CR>", "   find text (live grep)" },
 
 		-- treesitter
@@ -209,5 +215,57 @@ M.git = {
 		[";k"] = { "<cmd> Gitsigns prev_hunk <CR>", "  git prev hunk" },
 	},
 }
+
+if vim.g.neovide then
+	M.nvterm = {
+		t = {
+			-- toggle in terminal mode
+			["<D-i>"] = {
+				function()
+					require("nvterm.terminal").toggle("float")
+				end,
+				"toggle floating term",
+			},
+
+			["<D-h>"] = {
+				function()
+					require("nvterm.terminal").toggle("horizontal")
+				end,
+				"toggle horizontal term",
+			},
+
+			["<D-v>"] = {
+				function()
+					require("nvterm.terminal").toggle("vertical")
+				end,
+				"toggle vertical term",
+			},
+		},
+
+		n = {
+			-- toggle in normal mode
+			["<D-i>"] = {
+				function()
+					require("nvterm.terminal").toggle("float")
+				end,
+				"toggle floating term",
+			},
+
+			["<D-h>"] = {
+				function()
+					require("nvterm.terminal").toggle("horizontal")
+				end,
+				"toggle horizontal term",
+			},
+
+			["<D-v>"] = {
+				function()
+					require("nvterm.terminal").toggle("vertical")
+				end,
+				"toggle vertical term",
+			},
+		},
+	}
+end
 
 return M

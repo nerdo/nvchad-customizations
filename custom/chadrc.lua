@@ -8,4 +8,6 @@ M.ui = require("custom.ui")
 
 M.plugins = require("custom.plugins")
 
+require("custom.neovide")
+
 return M
