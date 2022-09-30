@@ -5,6 +5,7 @@ if not present then
 end
 
 nvim_treesitter_context.setup({
+	mode = 'topline',
 	patterns = { -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
 		-- For all filetypes
 		-- Note that setting an entry here replaces all other patterns for this entry.
