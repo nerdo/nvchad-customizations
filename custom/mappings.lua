@@ -8,9 +8,6 @@ M.disabled = {
 		-- close buffer
 		["<leader>x"] = "",
 
-		-- sneak
-		[";"] = "",
-
 		-- next/prev diagnostics
 		["[d"] = "",
 		["d]"] = "",
@@ -39,7 +36,7 @@ M.disabled = {
 M.basic = {
 	v = {
 		-- greatest remap evar! https://youtu.be/qZO9A5F6BZs?t=356
-		-- (I think , is mapped to something else in visual mode, this ensures this works in visual mode)
+		-- preserves the register when using this keymap to paste
 		[",p"] = { '"_dP' },
 	},
 
@@ -92,7 +89,7 @@ M.basic = {
 		[",Q"] = { "<cmd> qa! <CR>", "quit without saving" },
 
 		-- highlighting
-		["<leader>h"] = { ":noh<CR>", "  turn off search highlights" },
+		[";/"] = { ":noh<CR>", "  turn off search highlights" },
 
 		-- path
 		["<leader>yr"] = { ":CpRelPath<CR>", "📋 copy relative file path to clipboard" },
@@ -227,14 +224,14 @@ if vim.g.neovide then
 				"toggle floating term",
 			},
 
-			["<D-h>"] = {
+			["<M-h>"] = {
 				function()
 					require("nvterm.terminal").toggle("horizontal")
 				end,
 				"toggle horizontal term",
 			},
 
-			["<D-v>"] = {
+			["<M-v>"] = {
 				function()
 					require("nvterm.terminal").toggle("vertical")
 				end,
@@ -251,14 +248,14 @@ if vim.g.neovide then
 				"toggle floating term",
 			},
 
-			["<D-h>"] = {
+			["<M-h>"] = {
 				function()
 					require("nvterm.terminal").toggle("horizontal")
 				end,
 				"toggle horizontal term",
 			},
 
-			["<D-v>"] = {
+			["<M-v>"] = {
 				function()
 					require("nvterm.terminal").toggle("vertical")
 				end,
