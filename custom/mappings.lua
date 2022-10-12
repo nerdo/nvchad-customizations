@@ -30,6 +30,12 @@ M.disabled = {
 		-- nvterm
 		["<leader>h"] = "",
 		["<leader>v"] = "",
+		["<M-i>"] = "",
+	},
+
+	t = {
+		-- nvterm
+		["<M-i>"] = "",
 	},
 }
 
@@ -213,56 +219,54 @@ M.git = {
 	},
 }
 
-if vim.g.neovide then
-	M.nvterm = {
-		t = {
-			-- toggle in terminal mode
-			["<D-i>"] = {
-				function()
-					require("nvterm.terminal").toggle("float")
-				end,
-				"toggle floating term",
-			},
-
-			["<M-h>"] = {
-				function()
-					require("nvterm.terminal").toggle("horizontal")
-				end,
-				"toggle horizontal term",
-			},
-
-			["<M-v>"] = {
-				function()
-					require("nvterm.terminal").toggle("vertical")
-				end,
-				"toggle vertical term",
-			},
+M.nvterm = {
+	t = {
+		-- toggle in terminal mode
+		["<M-f>"] = {
+			function()
+				require("nvterm.terminal").toggle("float")
+			end,
+			"toggle floating term",
 		},
 
-		n = {
-			-- toggle in normal mode
-			["<D-i>"] = {
-				function()
-					require("nvterm.terminal").toggle("float")
-				end,
-				"toggle floating term",
-			},
-
-			["<M-h>"] = {
-				function()
-					require("nvterm.terminal").toggle("horizontal")
-				end,
-				"toggle horizontal term",
-			},
-
-			["<M-v>"] = {
-				function()
-					require("nvterm.terminal").toggle("vertical")
-				end,
-				"toggle vertical term",
-			},
+		["<M-h>"] = {
+			function()
+				require("nvterm.terminal").toggle("horizontal")
+			end,
+			"toggle horizontal term",
 		},
-	}
-end
+
+		["<M-v>"] = {
+			function()
+				require("nvterm.terminal").toggle("vertical")
+			end,
+			"toggle vertical term",
+		},
+	},
+
+	n = {
+		-- toggle in normal mode
+		["<M-f>"] = {
+			function()
+				require("nvterm.terminal").toggle("float")
+			end,
+			"toggle floating term",
+		},
+
+		["<M-h>"] = {
+			function()
+				require("nvterm.terminal").toggle("horizontal")
+			end,
+			"toggle horizontal term",
+		},
+
+		["<M-v>"] = {
+			function()
+				require("nvterm.terminal").toggle("vertical")
+			end,
+			"toggle vertical term",
+		},
+	},
+}
 
 return M
