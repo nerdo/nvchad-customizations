@@ -51,6 +51,8 @@ M.basic = {
 		-- preserves the register when using this keymap to paste
 		[",p"] = { '"_dP' },
 
+		["!"] = { ";", "next horizontal match" },
+
 		-- simpler window navigation
 		["<C-h>"] = { "<C-w>h" },
 		["<C-j>"] = { "<C-w>j" },
