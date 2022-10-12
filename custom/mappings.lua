@@ -271,4 +271,50 @@ M.nvterm = {
 	},
 }
 
+M.neotest = {
+	n = {
+		["<M-t>"] = {
+			function()
+				require("neotest").run.run()
+			end,
+			"🧪 run nearest test",
+		},
+
+		["<M-l>"] = {
+			function()
+				require("neotest").run.run_last()
+			end,
+			"🧪 run last test",
+		},
+
+		["<M-L>"] = {
+			function()
+				require("neotest").run.stop()
+			end,
+			"🧪 stop test",
+		},
+
+		["<M-T>"] = {
+			function()
+				require("neotest").run.run(vim.fn.expand("%"))
+			end,
+			"⚗️  run current file",
+		},
+
+		["<M-O>"] = {
+			function()
+				require("neotest").output.open()
+			end,
+			"🔬 run current file",
+		},
+
+		[";t"] = {
+			function ()
+				require("neotest").summary.toggle()
+			end,
+			"🧫 toggle test summary",
+		},
+	},
+}
+
 return M

@@ -1,6 +1,17 @@
 return {
 	["windwp/nvim-autopairs"] = false,
 
+	["akinsho/neotest-go"] = {},
+	["haydenmeade/neotest-jest"] = {},
+	["marilari88/neotest-vitest"] = {},
+	["olimorris/neotest-phpunit"] = {},
+	["rouge8/neotest-rust"] = {},
+	["nvim-neotest/neotest"] = {
+		config = function ()
+			require("custom.plugins.neotest")
+		end
+	},
+
 	["NvChad/nvterm"] = {
 		override_options = {
 			terminals = {
