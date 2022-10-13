@@ -7,9 +7,9 @@ return {
 	["olimorris/neotest-phpunit"] = {},
 	["rouge8/neotest-rust"] = {},
 	["nvim-neotest/neotest"] = {
-		config = function ()
+		config = function()
 			require("custom.plugins.neotest")
-		end
+		end,
 	},
 
 	["NvChad/nvterm"] = {
@@ -21,7 +21,7 @@ return {
 						width = 1.0,
 
 						-- to be able to see the status line for the current mode
-						-- calculating it like this only works as long as the 
+						-- calculating it like this only works as long as the
 						-- number of lines in vim doesn't change (window resize)
 						height = (vim.o.lines - 4) / vim.o.lines,
 					},
@@ -168,7 +168,7 @@ return {
 		end,
 	},
 
-	-- quick scope automatically highlights individual 
+	-- quick scope automatically highlights individual
 	-- characters used to move with f,F,t,T motions
 	["unblevable/quick-scope"] = {},
 }
