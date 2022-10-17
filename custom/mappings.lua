@@ -47,6 +47,13 @@ M.basic = {
 	},
 
 	n = {
+		["<leader>i"] = {
+			function()
+				require("lsp-inlayhints").toggle()
+			end,
+			"toggle inlay hints",
+		},
+
 		-- greatest remap evar! https://youtu.be/qZO9A5F6BZs?t=356
 		-- preserves the register when using this keymap to paste
 		[",p"] = { '"_dP' },
@@ -309,7 +316,7 @@ M.neotest = {
 		},
 
 		[";t"] = {
-			function ()
+			function()
 				require("neotest").summary.toggle()
 			end,
 			"🧫 toggle test summary",
