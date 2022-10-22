@@ -1,4 +1,14 @@
 return {
+	["NvChad/ui"] = {
+		override_options = {
+			statusline = {
+				overriden_modules = function()
+					return require("custom.statusline-modules")
+				end,
+			},
+		},
+	},
+
 	["lvimuser/lsp-inlayhints.nvim"] = {
 		config = function()
 			require("custom.plugins.lsp-inlayhints")
