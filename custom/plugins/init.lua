@@ -1,6 +1,4 @@
 return {
-	["windwp/nvim-autopairs"] = false,
-
 	["lvimuser/lsp-inlayhints.nvim"] = {
 		config = function()
 			require("custom.plugins.lsp-inlayhints")
