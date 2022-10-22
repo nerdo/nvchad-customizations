@@ -24,7 +24,8 @@ return {
 				type_opts = {
 					float = {
 						row = 0,
-						width = 1.0,
+						col = 0,
+						width = 1,
 
 						-- to be able to see the status line for the current mode
 						-- calculating it like this only works as long as the
