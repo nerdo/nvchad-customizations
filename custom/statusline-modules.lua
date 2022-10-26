@@ -10,8 +10,8 @@ return {
 		-- Include the row,col of cursor
 		local cursor = vim.api.nvim_win_get_cursor(0)
 		local row = cursor[1]
-		local col = cursor[2]
-		local position = "%#St_pos_sep#" .. sep_l .. "%#St_pos_icon# " .. (row + 1) .. "," .. (col + 1)
+		local col = cursor[2] + 1
+		local position = "%#St_pos_sep#" .. sep_l .. "%#St_pos_icon# " .. row .. "," .. col
 		return st_modules.cursor_position() .. position .. " "
 	end,
 }
